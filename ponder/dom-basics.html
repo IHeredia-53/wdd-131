@@ -33,6 +33,13 @@
             </ul>
         </div>
     </div>
+        <label for="webdevlist">Choose One:</label>
+        <select name="code" id="webdevlist">
+            <option>Choose One:</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+        </select> 
     <script>
         // anytime we want to change DOM, use document
         console.log(document);
@@ -57,6 +64,13 @@
 
         // selects ALL ul's, [1] means second in array
         document.querySelectorAll("ul")[1].style.backgroundColor = "pink";
+
+        let selectElem = document.getElementById('webdevlist');
+        selectElem.addEventListener('change', function(){
+            let codeValue = selectElem.value;
+            console.log(codeValue);
+        })
+                          
 
     </script>         
 </body>
