@@ -31,6 +31,9 @@ nav a:hover {
     text-decoration: none;
     color: #616061;
 }
+nav {
+    text-align: right;
+}
 .menu-btn {
     cursor: pointer;
     border: none;
