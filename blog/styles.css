@@ -1,0 +1,115 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, serif;
+  background-color: white;
+  color: #222;
+  line-height: 1.6;
+}
+
+header {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(150, 52, 52);
+  font-size: 1.1rem;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.book-review {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.book-info {
+  text-align: left;
+  border-right: 1px solid #ccc;
+  padding-right: 1.5rem;
+}
+
+.book-info p {
+  margin-bottom: 1rem;
+}
+
+.book-content h2 {
+  color: rgb(150, 52, 52);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.book-content img {
+  display: block;
+  margin: 0 auto 1rem auto;
+  width: 200px;
+  max-width: 100%;
+}
+
+.book-content p {
+  max-width: 550px;
+}
+
+footer {
+  border-top: 1px solid #ccc;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: #555;
+}
+
+@media screen and (max-width: 700px) {
+
+  .book-review {
+    grid-template-columns: 1fr;
+  }
+
+  .book-info {
+    text-align: right;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    padding-right: 0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav-links {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+}
