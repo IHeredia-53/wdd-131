@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -6,57 +5,72 @@
 }
 
 body {
-  font-family: Georgia, serif;
-  background-color: white;
+  background: #f5f5f5;
   color: #222;
-  line-height: 1.6;
+  font-family: Georgia, serif;
+  line-height: 1.4;
 }
 
+/* Header */
+
 header {
-  border-bottom: 1px solid #ccc;
-  padding: 1rem 2rem;
+  padding-top: 1rem;
 }
 
 header h1 {
   text-align: center;
-  font-size: 2.5rem;
+  color: #38263a;
+  font-size: 3rem;
   margin-bottom: 1rem;
+}
+
+nav {
+  border-top: 2px solid #d8b07a;
+  border-bottom: 2px solid #d8b07a;
+  padding: 1rem 0;
 }
 
 .nav-links {
   display: flex;
   justify-content: flex-end;
-  gap: 2rem;
   list-style: none;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-right: 2rem;
 }
 
 .nav-links a {
+  color: #9e2035;
   text-decoration: none;
-  color: rgb(150, 52, 52);
   font-size: 1.1rem;
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
+.nav-links a:hover {
   text-decoration: underline;
 }
 
+/* Main */
+
 main {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 2rem auto;
-  padding: 0 1rem;
 }
 
-.book-review {
+/* Review Layout */
+
+.review {
   display: grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: 220px 1fr;
   gap: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
+
+/* Left column */
 
 .book-info {
-  text-align: left;
-  border-right: 1px solid #ccc;
+  text-align: right;
+  border-right: 1px solid #d8b07a;
   padding-right: 1.5rem;
 }
 
@@ -64,52 +78,70 @@ main {
   margin-bottom: 1rem;
 }
 
+.date {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.stars {
+  color: goldenrod;
+  font-size: 1.2rem;
+}
+
+/* Right column */
+
 .book-content h2 {
-  color: rgb(150, 52, 52);
-  font-size: 1.8rem;
+  color: #9e2035;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
 }
 
 .book-content img {
   display: block;
-  margin: 0 auto 1rem auto;
-  width: 200px;
-  max-width: 100%;
+  width: 220px;
+  margin-bottom: 1rem;
+  margin-left: 240px;
 }
 
-.book-content p {
-  max-width: 550px;
+.description {
+  max-width: 700px;
 }
+
+/* Footer */
 
 footer {
-  border-top: 1px solid #ccc;
+  border-top: 2px solid #d8b07a;
   text-align: center;
   padding: 1rem;
-  margin-top: 2rem;
-  color: #555;
+  margin-top: 3rem;
 }
 
-@media screen and (max-width: 700px) {
+/* Mobile */
 
-  .book-review {
+@media (max-width: 700px) {
+
+  .review {
     grid-template-columns: 1fr;
   }
 
   .book-info {
     text-align: right;
     border-right: none;
-    border-bottom: 1px solid #ccc;
-    padding-right: 0;
+    border-bottom: 1px solid #d8b07a;
+    padding-right: 1rem;
     padding-bottom: 1rem;
-    margin-bottom: 1rem;
+  }
+
+  .book-content h2 {
+    text-align: left;
+  }
+
+  .description {
+    text-align: left;
   }
 
   .nav-links {
     justify-content: flex-end;
-    flex-wrap: wrap;
-  }
-
-  header h1 {
-    font-size: 2rem;
+    padding-right: 1rem;
   }
 }
