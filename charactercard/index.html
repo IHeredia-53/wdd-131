@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Character Card</title>
+
+  <!-- Social Media Meta Information -->
+  <meta property="og:title" content="Swamp Guardian Character Card">
+  <meta property="og:description" content="Interactive RPG character card built with JavaScript objects and methods.">
+  <meta property="og:image" content="swamp-guardian.png">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Swamp Guardian Character Card">
+  <meta name="twitter:description" content="Interactive RPG character card built with JavaScript objects and methods.">
+  <meta name="twitter:image" content="swamp-guardian.png">
+</head>
+<body>
+
+<div class="card">
+  <img id="characterImage" class="image" src="swamp-guardian.png" alt="Swamp Guardian">
+
+  <div id="characterName" class="name"></div>
+
+  <div class="stats">
+    <p><strong>Class:</strong> <span id="characterClass"></span></p>
+    <p><strong>Level:</strong> <span id="characterLevel"></span></p>
+    <p><strong>Health:</strong> <span id="characterHealth"></span></p>
+  </div>
+
+  <div class="buttons">
+    <button onclick="attackCharacter()">Attack</button>
+    <button onclick="levelUpCharacter()">Level Up</button>
+  </div>
+</div>
+
+<script>
+  const character = {
+    name: "Snortleblat",
+    class: "Swamp Beast Diplomat",
+    level: 5,
+    health: 100,
+    image: "swamp-guardian.png",
+
+    attacked() {
+        if (this.health <= 0) {
+            alert("Character Died");
+            return;
+        }
+        this.health -= 20;
+        updateCard();
+    },
+    levelUp() {
+      this.level++;
+      updateCard();
+    }
+  };
+
+  function updateCard() {
+    document.getElementById("characterName").textContent = character.name;
+    document.getElementById("characterClass").textContent = character.class;
+    document.getElementById("characterLevel").textContent = character.level;
+    document.getElementById("characterHealth").textContent = character.health;
+    document.getElementById("characterImage").src = character.image;
+  }
+  function attackCharacter() {
+    character.attacked();
+  }
+  function levelUpCharacter() {
+    character.levelUp();
+  }
+  updateCard();
+</script>
+
+</body>
+</html>
