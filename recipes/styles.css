@@ -89,6 +89,12 @@ body {
   padding: 1rem;
 }
 
+#recipe-display {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .recipe-image {
   display: block;
   width: 100%;

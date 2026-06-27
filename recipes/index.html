@@ -19,7 +19,7 @@
   <meta property="og:url" content="https://your-domain.com/">
   <meta property="og:image" content="images/social-preview-image.png">
 
-  <!-- X (Twitter) -->
+  <!-- X Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="RecipeBook">
   <meta name="twitter:description" content="Browse delicious recipes and discover your next favorite meal.">
@@ -35,57 +35,29 @@
 <body>
 
   <header class="logo-section">
-    <img src="recipe-book.png" alt="Recipe Book logo">
+    <img src="images/recipe-book.png" alt="Recipe Book logo">
     <h1>RecipeBook</h1>
   </header>
 
   <main>
 
-    <form class="search-bar">
-      <input
-        type="search"
-        placeholder="Find a recipe"
-        aria-label="Search recipes"
-      >
-      <button type="submit">
-        <img src="search.svg" alt="Search">
-      </button>
-    </form>
+  <form class="search-bar" id="search-form">
 
-    <section class="recipe-card">
+    <input
+      id="search-input"
+      type="search"
+      placeholder="Find a recipe"
+      aria-label="Search recipes"
+    >
 
-      <img
-        class="recipe-image"
-        src="apple-crisp.jpg"
-        alt="Apple Crisp served with vanilla ice cream"
-      >
+    <button id="searchButton" type="submit">
+      <img src="images/search.svg" alt="Search">
+    </button>
 
-      <div class="recipe-content">
+  </form>
 
-        <span class="tag">dessert</span>
-
-        <h2>Apple Crisp</h2>
-
-        <span
-          class="rating"
-          role="img"
-          aria-label="Rating: 4 out of 5 stars"
-        >
-          <span aria-hidden="true">⭐</span>
-          <span aria-hidden="true">⭐</span>
-          <span aria-hidden="true">⭐</span>
-          <span aria-hidden="true">⭐</span>
-          <span aria-hidden="true">☆</span>
-        </span>
-
-        <p class="description">
-          This apple crisp recipe is a simple yet delicious fall dessert
-          that's great served warm with vanilla ice cream.
-        </p>
-
-      </div>
-
-    </section>
+  <!-- JS inserts recipe cards here -->
+  <section id="recipe-display"></section>
 
   </main>
 
@@ -93,19 +65,20 @@
 
     <a
       href="https://www.flaticon.com/free-icons/recipe"
-      title="recipe icons"
-    >
+      title="recipe icons">
       Recipe icons created by Freepik - Flaticon
     </a>
 
     <div class="social">
       <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates -->
-      <a href="#"><img src="instagram_icon.svg" alt="Instagram"></a>
-      <a href="#"><img src="youtube_icon.svg" alt="YouTube"></a>
-      <a href="#"><img src="pinterest_icon.svg" alt="Pinterest"></a>
+      <a href="#"><img src="images/instagram_icon.svg" alt="Instagram"></a>
+      <a href="#"><img src="images/youtube_icon.svg" alt="YouTube"></a>
+      <a href="#"><img src="images/pinterest_icon.svg" alt="Pinterest"></a>
     </div>
 
   </footer>
+
+  <script src="recipes.js"></script>
 
 </body>
 </html>
